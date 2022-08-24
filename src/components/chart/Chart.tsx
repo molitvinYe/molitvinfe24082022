@@ -28,19 +28,34 @@ const Chart = () => {
       return allTime + currentTime.time} , 0).toFixed(2))
   }, [chartItems])
 
+  const generateHandler = () => {
+    setChartItems(prev => prev.map((item) => {
+      item.time = Number(getRandomNumber(0.01, 10).toFixed(2))
+      return item
+    }))
+  }
+
+  const getRandomNumber = (min: number, max: number) => {
+    return Math.random() * (max - min) + min;
+  }
+
   return (
-    <List>
-      {itemsBeforeTime.length !== 0 && <>
-        {chartItems.map((item, index) => {
-          return <ChartItem 
-            key = {item.name} 
-            item = {item} 
-            allTime = {allTime} 
-            beforeTime = {itemsBeforeTime[index]}/>
-        })}
-      </>
-      }
-    </List>
+    <>
+      <List>
+        {itemsBeforeTime.length !== 0 && <>
+          {chartItems.map((item, index) => {
+            return <ChartItem 
+              key = {item.name} 
+              item = {item} 
+              allTime = {allTime} 
+              beforeTime = {itemsBeforeTime[index]}/>
+          })}
+        </>
+        }
+      </List>
+      <button onClick = {generateHandler}>Random generate</button>
+    </>
+
   )
 }
 

@@ -12,11 +12,11 @@ const ChartItem: React.FC<ChartItemTypes> = ({item, allTime, beforeTime}) => {
   const positionLeft: string = useMemo(() => {
     if (beforeTime === 0) return "0%"
     return `${beforeTime / allTime * 100}%`
-  }, [])
+  }, [beforeTime, allTime])
 
   const itemWidth = useMemo(() => {
     return `${item.time / allTime * 100}%`
-  },[])
+  },[item, allTime])
 
   return (
     <Item>
