@@ -1,7 +1,7 @@
 import React, {useState, useMemo, useEffect, useCallback} from 'react'
 import { CHART_ITEMS } from '../../store/constants'
 import ChartItem from './ChartItem'
-import { List } from './Chart.styled'
+import { List, Button } from './Chart.styled'
 import { IChartItem } from '../../modals/IChartItem'
 
 const Chart = () => {
@@ -53,7 +53,7 @@ const Chart = () => {
         </>
         }
       </List>
-      <button onClick = {generateHandler}>Random generate</button>
+      <Button onClick = {generateHandler}>Random generate</Button>
     </>
 
   )

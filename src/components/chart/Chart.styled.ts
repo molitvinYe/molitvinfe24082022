@@ -14,3 +14,10 @@ export const List = styled.ul`
     width: 95%;
   }
 `
+
+export const Button = styled.button`
+  color: ${props => props.theme.palette.primary.main};
+  border: 1px solid ${props => props.theme.palette.primary.main};
+  background-color: ${props => props.theme.bg.primary};
+  padding: 10px 20px;
+`
