@@ -1,4 +1,6 @@
-export const CHART_ITEMS = [
+import { IChartItem } from "../modals/IChartItem"
+
+export const CHART_ITEMS: IChartItem[] = [
   { name: "Landing Page", time: 7.4 },
   { name: "Configurator", time: 0.2 },
   { name: "Check-out", time: 7.0 },
