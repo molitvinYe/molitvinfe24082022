@@ -7,5 +7,10 @@ export const List = styled.ul`
   padding: 20px;
   list-style: none;
 
-  border: 1px solid black
+  border: 1px solid ${props => props.theme.palette.primary.main};
+  background-color: ${props => props.theme.bg.primary};
+
+  @media (max-width: 800px) {
+    width: 95%;
+  }
 `
