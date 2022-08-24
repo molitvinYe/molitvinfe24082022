@@ -16,6 +16,7 @@ export const List = styled.ul`
 `
 
 export const Button = styled.button`
+  cursor: pointer;
   color: ${props => props.theme.palette.primary.main};
   border: 1px solid ${props => props.theme.palette.primary.main};
   background-color: ${props => props.theme.bg.primary};
